@@ -1,0 +1,32 @@
+Breakpoint 1 at 0x11ad
+Breakpoint 2 at 0x1246
+Breakpoint 3 at 0x1254
+<<<---INICIO--->>>
+
+Breakpoint 1, 0x565561ad in main ()
+
+Breakpoint 2, 0x56556246 in incnumber ()
+
+Breakpoint 3, 0x56556254 in incrementar ()
+<<<---BUCLE--->>>
+eax            0x0                 0
+
+Breakpoint 3, 0x56556254 in incrementar ()
+$1 = void
+eax            0x2                 2
+
+Breakpoint 3, 0x56556254 in incrementar ()
+$2 = 4
+eax            0x4                 4
+
+Breakpoint 3, 0x56556254 in incrementar ()
+$3 = 3
+eax            0x6                 6
+
+Breakpoint 3, 0x56556254 in incrementar ()
+$4 = 2
+eax            0x8                 8
+[Inferior 1 (process 6006) exited normally]
+$5 = 1
+PruebaGdb.gdb:57: Error in sourced command file:
+No registers.

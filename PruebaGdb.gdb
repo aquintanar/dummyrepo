@@ -1,5 +1,5 @@
 
-set logging file output.txt
+set logging file PruebaGdb.txt
 
 set print pretty on
 
@@ -13,9 +13,15 @@ set args 4
 
 file PruebaGdb
 
+
+
+
+
 b main
 
 b incnumber
+
+b incrementar
 
 define hook-echo
 echo <<<---
@@ -25,12 +31,31 @@ define hookpost-echo
 echo --->>>\n
 end
 
+define log 
+    printf "El valor del registro %d\n",$arg0
+end
+
+
 
 echo INICIO
 
 r
 
 c
+
+c
+
+echo BUCLE
+
+set $cont = $ecx 
+
+while($cont>1)
+    i r eax
+    c
+    p $count
+    set $count = $ecx
+end
+
 
 
 echo FIN
